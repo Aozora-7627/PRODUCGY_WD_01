@@ -193,6 +193,31 @@
       </div>
     </div>
   </footer>
+  <script>
+    // 1. Scroll-triggered Header Background Effect
+    const header = document.getElementById('mainHeader');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Extra Javascript Interactivity for Menu Item Hovers (Dynamic color pulse)
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuLinks.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        link.style.transform = 'translateY(-1px)';
+      });
+
+      link.addEventListener('mouseleave', () => {
+        link.style.transform = 'translateY(0px)';
+      });
+    });
+  </script>
 
 </body>
 </html>
